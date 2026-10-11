@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profsteer: steer your studies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Pixelify+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+  <div id="pixels" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top"><span class="logo"></span>Profsteer</a>
+      <div class="links">
+        <a href="#how">How it works</a>
+        <a href="#finder">Exam finder</a>
+        <a href="#results">Results</a>
+      </div>
+      <a class="btn btn-sm" href="#finder">Start</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <a class="banner" href="#finder">39 exams and 22 scholarships, at home and abroad →</a>
+    <h1 class="wordmark">PROFSTEER</h1>
+    <p class="tagline">Steer your studies, one exam at a time.</p>
+    <p class="lede">Tell us your degree, field and dream career.<br>We match you with the exams, colleges and scholarships that fit.</p>
+    <div class="cta">
+      <a class="btn" href="#finder">▶ Find my exams</a>
+      <a class="btn ghost" href="#how">How it works</a>
+    </div>
+  </header>
+
+  <section class="section" id="how">
+    <h2>How it works</h2>
+    <p class="section-sub">Three steps. No sign-up.</p>
+    <div class="steps">
+      <div class="panel"><h3>1 · Your profile</h3><p>Pick your current qualification, field, career goal, and whether you want to study at home or abroad.</p></div>
+      <div class="panel"><h3>2 · Smart matching</h3><p>Every exam is scored against your profile, filtered by level, college type (government or private) and region.</p></div>
+      <div class="panel"><h3>3 · Scholarships</h3><p>See the funding options linked to your best-matching exams, up to PhD level.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="finder">
+    <h2>Find your exams</h2>
+    <p class="section-sub">Choose your situation, then press the button.</p>
+
+    <div class="panel">
+      <div class="toggle">
+        <label><input type="radio" name="mode" value="home" checked> 🏠 Study at home</label>
+        <label><input type="radio" name="mode" value="abroad"> ✈️ Study abroad</label>
+      </div>
+
+      <div class="grid">
+        <div class="field">
+          <label for="level">Current qualification</label>
+          <select id="level">
+            <option value="highschool">High school</option>
+            <option value="bachelors" selected>Bachelor's (in progress / completed)</option>
+            <option value="masters">Master's</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="target">I'm aiming for</label>
+          <select id="target">
+            <option value="any">Show me everything</option>
+            <option value="bachelors">Bachelor's admission</option>
+            <option value="masters">Master's admission</option>
+            <option value="phd">PhD / research fellowship</option>
+            <option value="career">Professional licence / government job</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="field">Field of interest</label>
+          <select id="field">
+            <option value="engineering">Engineering / Tech</option>
+            <option value="science">Science</option>
+            <option value="business">Business / Management</option>
+            <option value="medicine">Medicine / Health</option>
+            <option value="law">Law</option>
+            <option value="humanities">Humanities / Social sciences</option>
+            <option value="design">Design / Architecture</option>
+            <option value="agriculture">Agriculture</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="career">Future career path</label>
+          <select id="career">
+            <option value="research">Research / academia</option>
+            <option value="industry">Industry / tech</option>
+            <option value="management">Management / consulting</option>
+            <option value="public service">Public service</option>
+            <option value="practice">Professional practice (doctor, lawyer, etc.)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="inst">College type</label>
+          <select id="inst">
+            <option value="any">Government or private</option>
+            <option value="government">Government / public</option>
+            <option value="private">Private</option>
+          </select>
+        </div>
+
+        <div class="field" id="regionBox" style="display:none">
+          <label for="region">Preferred country / region</label>
+          <select id="region">
+            <option value="any">Anywhere</option>
+            <option value="US">United States</option>
+            <option value="UK">United Kingdom</option>
+            <option value="Canada">Canada</option>
+            <option value="Europe">Europe</option>
+            <option value="Australia">Australia</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="go" class="btn full">▶ Find my exams</button>
+    </div>
+
+    <div id="results"></div>
+  </section>
+
+  <footer>Profsteer · always verify dates, fees and eligibility on official websites</footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>
